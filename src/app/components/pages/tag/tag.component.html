@@ -1,0 +1,5 @@
+<div *ngIf="tags" class=" h-max w-full flex flex-wrap justify-center gap-y-2 gap-x-1">
+  <a class="rounded-full  bg-white text-black p-2 hover:bg-slate-300 hover:cursor-pointer leading-none flex items-center" *ngFor="let tag of tags" routerLink="/tag/{{tag.name}}">
+    {{tag.name}} <span class="w-5 mt-0.5 ml-1 h-5 p-1 rounded-full bg-red-500 text-white flex items-center justify-center">{{tag.count}}</span>
+  </a>
+</div>

@@ -1,7 +1,9 @@
-
-<div class="flex items-center justify-center py-3">
+<div>
   <app-search></app-search>
 </div>
+<app-tag></app-tag>
+
+
 
 <section class="text-gray-600 body-font">
   <div class="container px-5 py-24 mx-auto">
@@ -43,7 +45,6 @@
 </section>
 
 
-
 <!-- <ul>
   <li *ngFor="let food of foods">
      <a routerLink="/food/{{food.id}}">
@@ -58,12 +59,8 @@
         <star-rating
         [value]="food.stars" [totalstars]="5"
         [readonly]="true" checkedcolor="red" uncheckedcolor="black"
-        size="22px" ></star-rating>
+        size="22px"></star-rating>
       </div>
      </div>
   </li>
 </ul> -->
-
-
-
-
