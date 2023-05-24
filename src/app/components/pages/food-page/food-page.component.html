@@ -40,7 +40,9 @@
       <div class="price">
         {{food.price | currency:'INR'}}
       </div>
-      <button type="button" class="text-white p-2 bg-blue-500 rounded-xl mt-2">
+      <button
+      (click)="addToCart()"
+      type="button" class="text-white p-2 bg-blue-500 rounded-xl mt-2">
         Add to Cart
       </button>
     </div>
