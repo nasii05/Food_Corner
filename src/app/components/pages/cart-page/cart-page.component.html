@@ -1,1 +1,84 @@
-<p>cart-page works!</p>
+<app-title class="text-center" title="cart Page" margin="1.5rem"></app-title>
+<!-- <div class="container">
+   <ul>
+      <li *ngFor="let cartItem of cart.items">
+        <div>
+           <img [src]="cartItem.food.imageUrl" [alt]="cartItem.food.name">
+        </div>
+        <div>
+          <a routerLink="/food/{{cartItem.food.id}}">
+            {{cartItem.food.name}}
+          </a>
+        </div>
+        <div>
+            <select #quantitySelect [value]="cartItem.quantity"
+            (change)="changeQuantity(cartItem, quantitySelect.value)">
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+           </select>
+        </div>
+        <div>
+          {{cartItem.price | currency:'INR'}}
+        </div>
+
+        <div>
+          <button class="remove-button" (click)="removeFromCart(cartItem)">Remove</button>
+        </div>
+      </li>
+   </ul>
+
+   <div class="checkout">
+    <div>
+      <div class="food-count"> {{cart.totalCount}} </div>
+      <div class="total-price"> {{cart.totalCount}} </div>
+    </div>
+    <a routerLink="/checkout">Proceed To Checkout</a>
+   </div>
+</div> -->
+
+<div class=" pb-5 w-auto flex items-center justify-center">
+  <div>
+      <ul>
+    <li *ngFor="let cartItem of cart.items">
+       <div class="w-80 h-[26rem] bg-slate-200 rounded-md flex flex-col items-center overflow-hidden">
+            <img
+              class=""
+             [src]="cartItem.food.imageUrl" [alt]="cartItem.food.name">
+          <div>
+          <a routerLink="/food/{{cartItem.food.id}}">
+            {{cartItem.food.name}}
+          </a>
+          <div class="text-center">
+            {{cartItem.price | currency:'INR'}}
+          </div>
+          <div class="text-center">
+              <button class="remove-button p-2 bg-blue-400
+              " (click)="removeFromCart(cartItem)">Remove</button>
+          </div>
+          <div>
+            <select #quantitySelect [value]="cartItem.quantity"
+            (change)="changeQuantity(cartItem, quantitySelect.value)">
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+           </select>
+        </div>
+          <div class="checkout">
+            <div>
+              <div class="food-count">quantity {{cart.totalCount}} </div>
+            </div>
+            <a routerLink="/checkout">Proceed To Checkout</a>
+           </div>
+        </div>
+       </div>
+
+    </li>
+  </ul>
+  </div>
+
+</div>
